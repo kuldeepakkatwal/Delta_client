@@ -24,6 +24,33 @@ A professional Python client library for the [Delta Exchange](https://www.delta.
 - 📉 **Put Options** (P-BTC-95000-141125, etc.)
 - ❌ **Spot Trading** (not available on Delta Exchange)
 
+## 🎯 Core Client Files
+
+**Main clients you'll work with:**
+
+| File | Purpose | Use For |
+|------|---------|---------|
+| **`delta_exchange/client.py`** | 📡 **REST API Client** | Order placement, account management, positions |
+| **`delta_exchange/websocket_client.py`** | 🔌 **WebSocket Client** | Real-time market data, live order updates |
+
+**Quick Import:**
+```python
+from delta_exchange import DeltaRestClient, DeltaWebSocketClient
+
+# REST Client - for trading and account management
+rest_client = DeltaRestClient(api_key="...", api_secret="...")
+
+# WebSocket Client - for real-time data
+ws_client = DeltaWebSocketClient(api_key="...", api_secret="...")
+```
+
+**Supporting modules:**
+- `delta_exchange/auth.py` - Authentication & signature generation
+- `delta_exchange/models.py` - Data models (Order, Position, Balance, etc.)
+- `delta_exchange/enums.py` - Enums (OrderSide, OrderType, ContractType, etc.)
+- `delta_exchange/exceptions.py` - Custom exceptions
+- `delta_exchange/constants.py` - API endpoints and configuration
+
 ## 📚 Documentation
 
 **Complete documentation is available in the `docs/` directory:**

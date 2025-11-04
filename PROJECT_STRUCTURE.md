@@ -4,6 +4,28 @@ Clean, organized structure for the Delta Exchange Python Client.
 
 ---
 
+## 🎯 Core Client Files
+
+**For developers - these are the 2 main files you need:**
+
+| File | Purpose | Lines | Use For |
+|------|---------|-------|---------|
+| **`delta_exchange/client.py`** | 📡 **REST API Client** | 763 | Order placement, account management, positions |
+| **`delta_exchange/websocket_client.py`** | 🔌 **WebSocket Client** | 701 | Real-time market data, live order updates |
+
+**Quick Import:**
+```python
+from delta_exchange import DeltaRestClient, DeltaWebSocketClient
+
+# REST Client - for trading and account management
+rest_client = DeltaRestClient(api_key="...", api_secret="...")
+
+# WebSocket Client - for real-time data
+ws_client = DeltaWebSocketClient(api_key="...", api_secret="...")
+```
+
+---
+
 ## 📁 Root Directory (Clean!)
 
 ```
